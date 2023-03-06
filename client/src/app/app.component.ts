@@ -11,9 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Angular-Dotnet';
   users:any;
 
-  constructor(private http:HttpClient){
-
-  }
+  constructor(private http:HttpClient){  }
   ngOnInit(): void {
     this.http.get('https://localhost:5001/api/user').subscribe({
       next: response => this.users=response,
