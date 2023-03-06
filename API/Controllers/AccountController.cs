@@ -27,7 +27,7 @@ namespace API.Controllers
             
         }
 
-        //[AllowAnonymous]
+        [AllowAnonymous]
         [HttpPost("register")] 
         public async Task<ActionResult<UserDto>> registerUser(RegisterDto registerDto)
         {
