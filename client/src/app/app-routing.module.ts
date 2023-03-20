@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TestErrorComponent } from './errors/test-error/test-error.component';
 import { HomeComponent } from './home/home.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './messages/messages.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { ServerErrorComponent } from './server-error/server-error.component';
 import { AuthGuard } from './_guard/auth.guard';
 
 const routes: Routes = [
@@ -19,7 +22,9 @@ const routes: Routes = [
     {path:'messages',component:MessagesComponent},
   ]
   },
-  
+  {path:'errors',component:TestErrorComponent},
+  {path:'notfound',component:NotFoundComponent},
+  {path:'servererror',component:ServerErrorComponent},
   {path:'**',component:HomeComponent,pathMatch:'full'}
 ];
 
